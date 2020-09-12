@@ -1,0 +1,264 @@
+#classiwrapper, .awpcp-media-center {
+
+    .awpcp-uploaded-files-group {
+        padding-bottom: 1px;
+    }
+    .awpcp-uploaded-files-group-title {
+        background: #EEE;
+        border: 1px solid #DDD;
+        font-size: 1.2em;
+        margin: 10px 0;
+        padding: 4px;
+        text-align: center;
+    }
+
+    .awpcp-uploaded-files-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* Uploaded File */
+
+    .awpcp-uploaded-file {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        list-style-type: none;
+        margin: 0 0 24px;
+        position: relative;
+        text-align: center;
+        width: 125px; // TODO: Define this inline, using the value from the settings.
+    }
+
+    .awpcp-progress-bar {
+        background-color: #00CA6B;
+        height: 8px;
+    }
+
+    .awpcp-uploaded-file-thumbnail-container {
+        margin-bottom: 0;
+
+        img {
+            border-radius: 0;
+            box-shadow: none;
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+    .is-disabled .awpcp-uploaded-file-thumbnail-container img {
+        opacity: 0.5;
+    }
+
+    .awpcp-uploaded-file-label {
+        position: absolute;
+        bottom: -22px;
+        height: 20px;
+        background: #B6E2AF;
+        font-size: 11px;
+        padding: 0 6px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        line-height: 18px;
+        left: 0;
+    }
+    .awpcp-uploaded-file-primary-label {
+        background: #B6E2AF;
+    }
+    .awpcp-uploaded-file-rejected-label {
+        background: @attachment_rejected_background;
+    }
+
+    /* Uploaded File States */
+
+    .is-primary {
+        background: #B6E2AF;
+        border: 2px solid #86CC7C;
+        padding: 1px;
+    }
+
+    .is-awaiting-approval {
+        background: @attachment_awaiting_approval_background;
+        border-color: #E6E6C8;
+    }
+    .is-rejected {
+        background: @attachment_rejected_background;
+        border: 2px solid #FC9393;
+        padding: 1px;
+    }
+    .is-approved {
+        // background: @attachment_approved_background;
+    }
+
+    /* Uploaded File Actions */
+
+    .awpcp-uploaded-files-table {
+        margin: 0;
+
+        td {
+            padding: 3px;
+            vertical-align: middle;
+        }
+
+        .awpcp-uploaded-file {
+            float: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        .awpcp-uploaded-file-name {
+            padding-left: 8px;
+            text-align: left;
+        }
+    }
+
+    /* Uploaded File Actions */
+
+    .awpcp-uploaded-file-actions {
+        display: flex;
+        justify-content: center;
+        margin: 4px 0;
+    }
+
+    .awpcp-uploaded-file-action {
+        background: #FBFBFB;
+        border: 1px solid #E2E2E2;
+        border-radius: 2px;
+        flex: 0 0 auto;
+        list-style: none;
+        margin: 0 1px;
+
+        a, label {
+            background: transparent center center no-repeat;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            height: 24px;
+            padding: 2px;
+            width: 24px;
+            line-height: 20px;
+        }
+        &:hover {
+            border-color: #B3B3B3;
+            background-color: #D8D8D8;
+        }
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        span {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .is-primary .awpcp-uploaded-file-action {
+        background: #ECF6EA;
+        border-color: #9BCE93;
+
+        &:hover {
+            background: #A5D69D;
+        }
+    }
+
+    .awpcp-uploaded-file-toggle-action {
+        border-radius: 0;
+        border-right-width: 0;
+        margin: 0;
+
+        &:first-child {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+        &:last-child {
+            border-right-width: 1px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        .awpcp-toggle-button {
+            float: left;
+        }
+    }
+
+    .awpcp-uploaded-file-change-status-action label {
+        padding: 0 4px;
+        width: auto;
+    }
+
+    .awpcp-uploaded-file-set-as-primary-action {
+        span {
+            display: block;
+        }
+    }
+
+    .awpcp-uploaded-file-loading-icon {
+        background: none !important;
+        border: none !important;
+    }
+
+    .awpcp-uploaded-file-spinner {
+        background-color: #fff;
+        margin: -25px -10px;
+        padding: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 12px;
+    }
+
+    /* Uploaded Video Actions */
+
+    .awpcp-uploaded-video-delete-action a {
+        background-image: @delete_video_icon_url;
+    }
+}
+
+#classiwrapper, .awpcp-media-center {
+    .awpcp-media-manager-small {
+        .awpcp-uploaded-file {
+            float: left;
+            width: 49%;
+            margin-right: 1%;
+            margin-left: 1%;
+        }
+        .awpcp-uploaded-file:nth-child(2n+1) {
+            margin-left: 0;
+        }
+        .awpcp-uploaded-file:nth-child(2n+2) {
+            margin-right: 0;
+        }
+    }
+
+    .awpcp-media-manager-medium {
+        .awpcp-uploaded-file {
+            float: left;
+            width: 32%;
+            margin-right: 1%;
+            margin-left: 1%;
+        }
+        .awpcp-uploaded-file:nth-child(3n+1) {
+            margin-left: 0;
+        }
+        .awpcp-uploaded-file:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    .awpcp-media-manager-large {
+        .awpcp-uploaded-files-list {
+            margin-left: -9px;
+            margin-right: -9px;
+        }
+        .awpcp-uploaded-file {
+            float: left;
+            width: 205px;
+            margin-right: 9px;
+            margin-left: 9px;
+        }
+    }
+}

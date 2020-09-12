@@ -1,0 +1,84 @@
+body:not(.wp-admin), #classiwrapper {
+    .awpcp-message {
+        background-color: #FFFBCC;
+        border: 1px solid #CCC;
+        color: #333;
+        margin: 10px 0;
+        padding: 8px 12px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .awpcp-message.updated, .awpcp-message-updated, .awpcp-message-success {
+        border-color: #E6DB55;
+    }
+    .awpcp-message.error, .awpcp-message-error {
+        border-color: #CC0000;
+    }
+    .awpcp-message.info, .awpcp-message-info {
+        background: #f7fdff;
+        border-color: #00A1CE;
+    }
+    .awpcp-message.ghost {
+        display: none;
+    }
+
+    .awpcp-updated {
+        border-color: #E6DB55;
+        display: block !important;
+    }
+
+    .awpcp-error {
+        background-color: @error-message-background-color;
+        border-color: @error-message-border-color;
+        color: @error-message-font-color;
+        font-weight: normal;
+        font-size: 14px;
+    }
+}
+
+.wp-admin {
+    .awpcp-message:not(.notice) {
+        background-color: #FFFBCC;
+        border: 1px solid #CCC;
+        color: #333;
+        margin: 10px 0;
+        padding: 8px 12px;
+
+        &.info {
+            border-color: #00A1CE;
+        }
+        &.ghost {
+            display: none;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .awpcp-updated:not(.notice) {
+        border-color: #E6DB55;
+        display: block !important;
+    }
+
+    .awpcp-error:not(.notice) {
+        background-color: @error-message-background-color;
+        border-color: @error-message-border-color;
+        color: @error-message-font-color;
+        font-weight: normal;
+        font-size: 14px;
+    }
+}
+
+.wrap div.awpcp-inline-form-error /* necessary to overwrite WordPress styles */ {
+    background: #FFF;
+    border-radius: 3px;
+    border-color: #D15151;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    color: #555;
+    margin: 0.5em;
+    padding: 0.5em 0.7em;
+}

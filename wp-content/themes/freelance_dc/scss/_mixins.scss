@@ -1,0 +1,31 @@
+@mixin fade {
+  transition: all .15s ease-in;
+}
+
+@mixin heading-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin body-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin well($width) {
+  max-width: $width;
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+@mixin icon-block($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  text-align: center;
+}

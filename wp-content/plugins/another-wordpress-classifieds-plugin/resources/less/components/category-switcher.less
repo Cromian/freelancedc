@@ -1,0 +1,25 @@
+.awpcp-category-switcher {
+    float: left;
+    margin: 0 0 10px;
+    min-width: 80%;
+    max-width: 100%;
+
+    .awpcp-category-dropdown-container {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: stretch;
+
+        .awpcp-category-dropdown-label {
+            flex: 0 1 auto;
+            margin: 0 8px 0 0;
+        }
+        .awpcp-category-dropdown {
+            flex: 0 1 auto;
+        }
+        &> .select2-container {
+            flex: 1; /* flex: 0 1 auto was not working on https://github.com/drodenbaugh/awpcp/issues/2528#issuecomment-525059479 */
+        }
+    }
+}

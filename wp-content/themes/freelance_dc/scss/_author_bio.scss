@@ -1,0 +1,61 @@
+// Author Bio
+.author_bio_box {
+  background-color: $accent;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 4rem;
+  border-top: 1px solid #ccc;
+
+  .well {
+    @include well($well);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-gap: 2rem;
+    @media screen and (max-width: $mobile-size) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  h2 {
+    margin: 0;  
+  }
+
+  .author_picture img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    display: block;
+    @media screen and (max-width: $mobile-size) {
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .sub_title {
+    color: $main-color;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .author_links a {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 100%;
+    background-color: $main-color;
+    margin-right: .5rem;
+
+    &:hover {
+      background-color: $second-color;
+    }
+
+  }
+
+  .follow {
+    color: $main-color;
+    font-weight: 600;
+  }
+}

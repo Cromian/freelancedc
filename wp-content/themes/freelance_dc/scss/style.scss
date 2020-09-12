@@ -1,0 +1,220 @@
+/*!
+Theme Name: Freelance DC
+Theme URI: http://underscores.me/
+Author: Misha Vinokur
+Author URI: https://digitalconfection.com
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: freelance_dc
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Freelance DC is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=Lato:wght@400;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=Lato&display=swap');
+
+@import 'vars';
+@import 'blocks';
+@import 'mixins';
+@import 'underscore';
+@import 'author_bio';
+@import 'content';
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  @include body-font();
+  color: $body;
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ @include heading-font();
+ color: $second-color;
+}
+
+h1 {
+  color: $main-color;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+a {
+  @include fade;
+  color: $main-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $second-color;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  @include well($well);
+}
+
+// Header
+.site-header {
+  @include well($well);
+  padding: 3rem 0 3rem 0;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  align-items: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media screen and (max-width: 680px) {
+    grid-template-columns: 1fr;
+    margin-bottom: unset;
+  }
+
+  .main-navigation {
+    text-align: right;
+    @media screen and (max-width: 680px) {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: -2rem;
+    }
+
+    li {
+      @include heading-font;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      list-style: none;
+      display: inline;
+      margin-left: 1rem;
+      @media screen and (max-width: 680px) {
+        display: block;
+        margin: unset;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    
+    }
+  }
+
+  #mobile-nav {
+    font-size: 1.5rem;
+    @media screen and (min-width: 680px) {
+      display: none;
+    }
+  }
+  
+  .nav-well {
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
+  }
+  
+}
+
+.banner {
+  margin-bottom: 4rem;
+  padding: 4rem 2rem 4rem 2rem;
+  background-size: cover;
+
+  h1 {
+    font-family: 'BioRhyme', serif;
+    font-weight: 800;
+  }
+
+  .text {
+    width: 50%;
+    @media screen and (max-width: 680px) {
+      width: unset;
+    }
+    color: $second-color;
+  }
+
+  .btn {
+    display: block;
+    margin-top: 2rem;
+    width: 200px;
+    border: 1px solid;
+    text-align: center;
+    padding: 1rem .5rem 1rem .5rem;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+main {
+  min-height: 60vh;
+}
+
+
+// Footer
+.site-footer {
+  background-color: $second-color;
+  text-align: center;
+  color: white;
+  padding: 4rem;
+
+  .social-links {
+    margin-bottom: 1rem;
+
+    a {
+      background-color: white;
+      color: $second-color;
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+      border-radius: 100%;
+      margin-left: .3rem;
+      margin-right: .3rem;
+      border: 2px solid $second-color;
+
+      &:hover {
+        background-color: $main-color;
+        color: white;
+        border: 2px solid white;
+      }
+    }
+  }
+}
+
+// Hacks
+.home {
+  .entry-title, .post-thumbnail {
+    display: none;
+  }
+}
+

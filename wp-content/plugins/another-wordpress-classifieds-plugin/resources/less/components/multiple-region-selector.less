@@ -1,0 +1,53 @@
+.awpcp-multiple-region-selector {
+
+    .add-region, .remove-region {
+        font-size: 0.8em;
+    }
+
+    .add-region {
+        margin-left: 10px;
+    }
+}
+
+#classiwrapper .awpcp-multiple-region-selector,
+.awpcp-multiple-region-selector {
+    ul {
+        .h-awpcp-nomargin-nopadding();
+
+        li {
+            list-style-type: none;
+            list-style-image: none;
+        }
+    }
+
+    .awpcp-region-selector {
+        margin-left: 0;
+        margin-bottom: 5px;
+        padding: 0;
+
+        .awpcp-region-selector-partials {
+            padding: 2px;
+        }
+
+        .awpcp-region-selector-partial {
+            .h-awpcp-nomargin-nopadding();
+
+            list-style-type: none;
+
+            label {
+                display: block;
+                margin-right: 5px;
+            }
+
+            .loading-message {
+                color: #555;
+                font-size: 0.9em;
+                font-style: italic;
+            }
+        }
+    }
+
+    .awpcp-region-selector:last-of-type {
+        margin-bottom: 0;
+    }
+}
