@@ -1,0 +1,33 @@
+article {
+  @include well($well);
+  margin-bottom: 1rem;
+
+  h1 {
+    color: $second-color;
+  }
+}
+
+
+.entry-content {
+
+  blockquote {
+    width: 70%;
+    @media screen and (max-width: $mobile-size) {
+      width: unset;
+    }
+    border-top: .5px solid $grey;
+    border-bottom: .5px solid $grey;
+    margin: auto;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    p {
+      color: $main-color;
+      font-style: italic;
+      font-size: 1.5rem;
+      margin: unset;
+    }
+  }
+
+}

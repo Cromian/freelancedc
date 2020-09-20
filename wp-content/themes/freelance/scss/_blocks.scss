@@ -1,0 +1,35 @@
+.wp-block-button__link {
+  border-radius: 0;
+}
+
+.wp-block-separator {
+  color: #6d6d6d;
+  background: linear-gradient(to left,currentColor calc(50% - 16px),transparent calc(50% - 16px),transparent calc(50% + 16px),currentColor calc(50% + 16px));
+  background-color: transparent!important;
+  border: none;
+  height: 1px;
+  overflow: visible;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  
+  &:before,
+  &:after {
+    background: currentColor;
+    content: "";
+    display: block;
+    height: 1.6rem;
+    position: absolute;
+    top: calc(50% - 0.8rem);
+    transform: rotate(22.5deg);
+    width: .1rem;
+  }
+
+  &:before {
+    left: calc(50% - 0.5rem);
+  }
+
+  &:after {
+    right: calc(50% - 0.5rem);
+  }
+}
