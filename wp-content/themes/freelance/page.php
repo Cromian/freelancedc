@@ -14,6 +14,6 @@
 <?php if ( comments_open() && ! post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
 </main>
-<?php edit_post_link(); ?>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
