@@ -171,8 +171,23 @@ article {
 
 main {
   min-height: 60vh;
+
 }
 
+
+.blog {
+
+  .wp-block-separator {
+    max-width: $contentwell;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}
 
 // Footer
 .site-footer {

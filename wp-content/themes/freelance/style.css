@@ -1048,6 +1048,16 @@ main {
   min-height: 60vh;
 }
 
+.blog .wp-block-separator {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.blog .wp-block-separator:last-child {
+  display: none;
+}
+
 .site-footer {
   background-color: #262261;
   text-align: center;
