@@ -74,10 +74,14 @@ a {
   @include well($well);
 }
 
+article {
+  max-width: $contentwell;
+}
+
 // Header
 .site-header {
   @include well($well);
-  padding: 3rem 0 3rem 0;
+  padding: 2rem 0 2rem 0;
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   align-items: center;
@@ -202,6 +206,21 @@ main {
   }
 }
 
+.page-header {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-image: url('img/page-header-bg.jpg');
+  margin-bottom: 3rem;
+
+  h1 {
+    color: white;
+    font-family: 'BioRhyme', serif;
+    font-weight: 800;
+  }
+
+}
+
 // Hacks
 .home {
   .entry-title, .post-thumbnail {
@@ -209,3 +228,6 @@ main {
   }
 }
 
+.post-navigation {
+  display: none;
+}

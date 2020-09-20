@@ -1,5 +1,3 @@
-
-
 <div class="author_bio_box">
   <div class="well">
     <div class="author_picture">
@@ -12,9 +10,17 @@
       <div class="sub_title"><?php the_field('title'); ?></div>
       <p><?php the_field('bio'); ?></p>
       <div class="author_links">
-				<a href="<?php the_field('website_link'); ?>"><i class="fas fa-link"></i></a>
-				<a href="<?php the_field('facebook_link'); ?>"><i class="fab fa-facebook-f"></i></a>
-        <a href="<?php the_field('twitter_link'); ?>"><i class="fab fa-twitter"></i></a>
+        <?php if (get_field('website_link')){ ?>
+          <a href="<?php the_field('website_link'); ?>"><i class="fas fa-link"></i></a>
+        <?php } ?>
+
+        <?php if (get_field('twitter_link')){ ?>
+          <a href="<?php the_field('twitter_link'); ?>"><i class="fab fa-twitter"></i></a>
+        <?php } ?>
+
+        <?php if (get_field('facebook_link')){ ?>
+          <a href="<?php the_field('facebook_link'); ?>"><i class="fab fa-facebook-f"></i></a>
+        <?php } ?>
       </div>
 
     </div>

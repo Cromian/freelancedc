@@ -11,7 +11,6 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  freelance
 */
-
 @import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=Lato:wght@400;600;700&display=swap");
 .wp-block-button__link {
   border-radius: 0;
@@ -947,12 +946,16 @@ a:hover {
   margin: auto;
 }
 
+article {
+  max-width: 800px;
+}
+
 .site-header {
   max-width: 1200px;
   width: 90%;
   display: block;
   margin: auto;
-  padding: 3rem 0 3rem 0;
+  padding: 2rem 0 2rem 0;
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   align-items: center;
@@ -1073,13 +1076,25 @@ main {
   border: 2px solid white;
 }
 
+.page-header {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-image: url("img/page-header-bg.jpg");
+  margin-bottom: 3rem;
+}
+.page-header h1 {
+  color: white;
+  font-family: "BioRhyme", serif;
+  font-weight: 800;
+}
+
 .home .entry-title, .home .post-thumbnail {
   display: none;
 }
 
-/*# sourceMappingURL=style.css.map */
-
-
-.screen-reader-text {
+.post-navigation {
   display: none;
 }
+
+/*# sourceMappingURL=style.css.map */
