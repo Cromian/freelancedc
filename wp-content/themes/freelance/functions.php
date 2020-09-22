@@ -4,7 +4,7 @@ function freelance_scripts() {
 	// wp_enqueue_style( 'freelance-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'font_awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css');
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), false, true);
-	// wp_enqueue_script('nav-js', get_template_directory_uri() . '/js/nav.js', array(), false, true );
+	wp_enqueue_script('nav-js', get_theme_file_uri() . '/js/nav.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'freelance_scripts' );
 

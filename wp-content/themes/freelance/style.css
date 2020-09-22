@@ -964,6 +964,16 @@ article {
   margin: 0;
   padding: 0;
 }
+.site-header .custom-logo-link {
+  display: block;
+  max-width: 350px;
+  width: 100%;
+}
+@media screen and (max-width: 680px) {
+  .site-header .custom-logo-link {
+    margin: auto;
+  }
+}
 @media screen and (max-width: 680px) {
   .site-header {
     grid-template-columns: 1fr;
@@ -976,8 +986,6 @@ article {
 @media screen and (max-width: 680px) {
   .site-header .main-navigation {
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
   }
 }
 .site-header .main-navigation li {
@@ -995,12 +1003,13 @@ article {
   .site-header .main-navigation li {
     display: block;
     margin: unset;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 .site-header #mobile-nav {
   font-size: 1.5rem;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 680px) {
   .site-header #mobile-nav {

@@ -90,6 +90,15 @@ article {
     margin: 0;
     padding: 0;
   }
+
+  .custom-logo-link {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+    @media screen and (max-width: 680px) {
+      margin: auto;
+    }
+  }
   
   @media screen and (max-width: 680px) {
     grid-template-columns: 1fr;
@@ -100,8 +109,8 @@ article {
     text-align: right;
     @media screen and (max-width: 680px) {
       text-align: center;
-      margin-top: 2rem;
-      margin-bottom: -2rem;
+      // margin-top: 2rem;
+      // margin-bottom: -2rem;
     }
 
     li {
@@ -114,8 +123,8 @@ article {
       @media screen and (max-width: 680px) {
         display: block;
         margin: unset;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       }
     
     }
@@ -123,6 +132,7 @@ article {
 
   #mobile-nav {
     font-size: 1.5rem;
+    margin-top: 1rem;
     @media screen and (min-width: 680px) {
       display: none;
     }
@@ -173,7 +183,6 @@ main {
   min-height: 60vh;
 
 }
-
 
 .blog {
 
